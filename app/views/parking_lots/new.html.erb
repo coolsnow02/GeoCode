@@ -1,0 +1,35 @@
+<div class="span4 well-large form-horizontal registration-form">
+  <legend>Parking Lot Registration</legend>
+  <%= form_for @parking_lot do |f| %>
+      <div class="control-group">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :address %>
+        <%= f.text_field :address %>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :city %>
+        <%= f.text_field :city %>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :state %>
+        <%= f.text_field :state %>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :zipcode %>
+        <%= f.text_field :zipcode %>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :country %>
+        <%= f.text_field :country %>
+      </div>
+      <%= f.submit "Register", :class => "btn btn-primary" %>
+  <% end %>
+</div>
