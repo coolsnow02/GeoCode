@@ -11,7 +11,11 @@ GeoCode::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-     resources :parking_lots
+     resources :parking_lots do
+       collection do
+         post :search_loc
+       end
+     end
 
   # Sample resource route with options:
   #   resources :products do

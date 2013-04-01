@@ -9,4 +9,8 @@ class ParkingLotsController < ApplicationController
   def create
     @parking_lot = ParkingLot.new(params[:parking_lot])
   end
+
+  def search_loc
+
+  end
 end
