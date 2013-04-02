@@ -8,6 +8,11 @@ class ParkingLotsController < ApplicationController
 
   def create
     @parking_lot = ParkingLot.new(params[:parking_lot])
+    if @parking_lot.save
+      redirect_to parking_lots_path
+    else
+      render 'new'
+    end
   end
 
   def search_loc
