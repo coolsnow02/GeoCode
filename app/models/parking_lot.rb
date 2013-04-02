@@ -5,10 +5,9 @@ class ParkingLot < ActiveRecord::Base
 
 
   #NOTE: Fields on which Geocoding is implemented.
-  #acts_as_gmappable
+  acts_as_gmappable  :process_geocoding => true, :check_process => true
 
   def gmaps4rails_address
-#describe how to retrieve the address from your model, if you use directly a db column, you can dry your code, see wiki
-    "#{self.street}, #{self.city}, #{self.country}"
+    "#{self.address}, #{self.city}, #{self.state}, #{self.zipcode}, #{self.country}"
   end
 end

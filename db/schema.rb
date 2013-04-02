@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401123430) do
+ActiveRecord::Schema.define(:version => 20130402073459) do
 
   create_table "parking_lots", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20130401123430) do
     t.datetime "updated_at", :null => false
     t.float    "latitude"
     t.float    "longitude"
+    t.boolean  "gmaps"
   end
 
 end

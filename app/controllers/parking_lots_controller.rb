@@ -3,7 +3,8 @@ class ParkingLotsController < ApplicationController
   end
 
   def new
-      @parking_lot = ParkingLot.new()
+    @parking_lot = ParkingLot.new()
+    @json = ParkingLot.all.to_gmaps4rails
   end
 
   def create
@@ -13,9 +14,5 @@ class ParkingLotsController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def search_loc
-
   end
 end
