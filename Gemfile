@@ -8,7 +8,7 @@ gem 'rails', '3.2.13'
 gem 'mysql2'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
-#gem 'geocoder'
+gem 'geocoder'
 gem 'gmaps4rails'
 
 

@@ -1,5 +1,6 @@
 class ParkingLotsController < ApplicationController
   def index
+
   end
 
   def new
@@ -15,4 +16,9 @@ class ParkingLotsController < ApplicationController
       render 'new'
     end
   end
+
+  def search_result
+    @lots = ParkingLot.where('city like ?', "%#{search}%")
+  end
+
 end
